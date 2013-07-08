@@ -1,0 +1,28 @@
+<!document html>
+<html>
+<head>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="question_container" style="text-align:center;"><span id="question">これは事故？</span></div>
+        <div class="span6">
+            <span id="yes-count">0</span>
+        </div>
+        <div class="span6">
+            <span id="no-count">0</span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="graph"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/underscore/underscore-min.js"></script>
+<script src="/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="/highcharts/js/highcharts.js"></script>
+<script src="/javascripts/viewer_script.js"></script>
+</body>
+</html>

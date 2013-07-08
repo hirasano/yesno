@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<!--
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+-->
+<style>
+
+.btn  {
+    background: -moz-linear-gradient(top,#FFF 0%,#EEE);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+    border: 1px solid #DDD;
+    color:#111;
+    padding: 10px 30px;
+    height: auto;
+    line-height: auto;
+    font-size:5em;
+    display: inline-block;
+    vertical-align:middle;
+}
+.btn:hover {
+    background: -moz-linear-gradient(top,#EEE 0%,#AAA);
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#AAA));
+    color:#555;
+}
+.btn:active, .btn.tapped {
+    background: -moz-linear-gradient(top,#DDD 0%,#888);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FDF), to(#F7F));
+    color: #FFA;
+}
+.btn.disabled {
+    background: -moz-linear-gradient(top,#EEE 0%,#AAA);
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#BBB));
+    color:#555;
+}
+.box {
+    display: table;
+    width: 100%;
+}
+.bt1-2 {
+    display: table-cell;
+    width: 50%;
+}
+.center {
+    text-align: center;
+}
+
+hr.border {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.3);
+}
+.question-area{
+    min-height: 200px;
+}
+</style>
+</head>
+<body>
+<div class="">
+    <div class="question-area box center">
+        <span class="span12" id="question"></span>
+    </div>
+    <hr class="border" />
+    <div class="box">
+        <div class="bt1-2 center">
+            <button id="yesno-yes" class="btn">YES</button>
+        </div>
+        <div class="bt1-2 center">
+            <button id="yesno-no" class="btn">NO</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/underscore/underscore-min.js"></script>
+<script src="/backbone/backbone-min.js"></script>
+<script src="/javascripts/top_script.js"></script>
+</body>
+</html>
