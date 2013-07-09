@@ -45,7 +45,11 @@ $(function(){
             });
 
             s.on('request:answer', function(data){
+                console.log("get request:answer");
+                console.log("forward answer fired");
+                var yesno_info = _this.model;
                 s.emit('forward:answer',{
+                    text: _this.model.get('question'),
                     yes: yesno_info.get('yes'),
                     no:  yesno_info.get('no')
                 });

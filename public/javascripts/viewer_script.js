@@ -9,9 +9,11 @@ $(function(){
             // 回答を受け取った場合 
             s.on('pub:answer', function(data){
                 _this.yesno_info.set({
+                    question: data.text || _this.yesno_info.get('question'),
                     series: [data.yes, data.no]
                 });
             });
+
 
             // 新しい質問
             s.on('pub:question', function(data){
@@ -33,6 +35,8 @@ $(function(){
             s.on('open', function(data){
                 s.emit('request:answer',{});
             });
+
+            s.emit('request:question',{});
         };
 
         _this.yesno_info = null;
@@ -124,7 +128,7 @@ $(function(){
                     chart.series[0].setData(this.get('series'));
                 },
                 'change:question':function(){
-                    question.text(this.get('question'));
+                    question.html(this.get('question'));
                 }
             });
         }

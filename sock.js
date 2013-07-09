@@ -43,6 +43,7 @@ exports.sockMngr = function(io){
                     if(room.viewer == null){
                         room.viewer = socket;
                         room.owner && room.owner.emit('request:answer',{});
+                        console.log("viewer joined");
                     }
                 } else {
                     if(room.owner == null){
@@ -89,9 +90,9 @@ exports.sockMngr = function(io){
 
             // viewerに回答状況を転送
             socket.on('forward:answer',function(data){
-                console.log('forward:answer');
                 var room = _this.ns.in('yesno');
                 if(room.viewer){
+                    console.log('forward:answer to viewer');
                     room.viewer.emit('pub:answer', data);
                 }
             });
